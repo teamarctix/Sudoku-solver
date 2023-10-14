@@ -1,20 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sudoku Solver - Solution</title>
     <!-- Include Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for Sudoku Grid */
+        .sudoku-table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 2px solid #000;
+        }
+
+        .sudoku-table td {
+            text-align: center;
+            width: 11.1%; /* 100% / 9 columns */
+            padding: 10px;
+            font-size: 24px;
+            border: 1px solid #ccc;
+        }
+
+        .sudoku-table tr:nth-child(3n) {
+            border-bottom: 2px solid #000;
+        }
+
+        .sudoku-table td:nth-child(3n) {
+            border-right: 2px solid #000;
+        }
+
+        @media (max-width: 768px) {
+            .sudoku-table td {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="mt-4">Solved Sudoku</h1>
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <table class="table table-bordered table-responsive">
+        <h1 class="mt-4 text-center">Solved Sudoku</h1>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+                <table class="sudoku-table">
                     {% for row in solved_grid %}
                         <tr>
                             {% for cell in row %}
-                                <td class="text-center">{{ cell }}</td>
+                                <td>{{ cell }}</td>
                             {% endfor %}
                         </tr>
                     {% endfor %}
@@ -23,6 +54,6 @@
         </div>
     </div>
     <!-- Include Bootstrap JS if needed -->
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
