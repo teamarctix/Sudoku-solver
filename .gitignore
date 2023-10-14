@@ -1,0 +1,12 @@
+# Python
+__pycache__
+# Virtual Environment
+myenv
+venv/
+# Logs and Databases
+logs/ 
+db.sqlite3
+# Local configuration
+instance/
+# Environment Variables
+.env
