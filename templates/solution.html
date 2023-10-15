@@ -22,11 +22,11 @@
         }
 
         .sudoku-table tr:nth-child(3n) {
-            border-bottom: 2px solid #000;
+            border-bottom: 4px solid #000;
         }
 
         .sudoku-table td:nth-child(3n) {
-            border-right: 2px solid #000;
+            border-right: 4px solid #000;
         }
 
         @media (max-width: 768px) {
@@ -41,7 +41,7 @@
         <h1 class="mt-4 text-center">Solved Sudoku</h1>
         <div class="row justify-content-center">
             <div class="col-12 col-md-6">
-                <table class="sudoku-table">
+                <table class="sudoku-table" style="border: 4px solid black;">
                     {% for row in solved_grid %}
                         <tr>
                             {% for cell in row %}
