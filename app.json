@@ -1,0 +1,11 @@
+{
+  "name": "Sudoku Solver",
+  "description": "Telegram Bot using Pyrogram",
+  "repository": "https://github.com/teamarctix/Sudoku-solve",
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "stack": "heroku-20"
+}
